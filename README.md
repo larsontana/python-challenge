@@ -43,7 +43,7 @@ max_decrease_value = min(profit_change)
 max_increase_month = profit_change.index(max(profit_change)) + 1
 min_decrease_month = profit_change.index(min(profit_change)) + 1
 
-# Print data. 
+# STEP 4: Print data. 
 
 print("Financial Analysis:")
 print(f"All Months: {len(all_months)}")
@@ -52,12 +52,12 @@ print(f"Average Change: {round(sum(profit_change)/len(profit_change),2)}")
 print(f"Max Increase: {all_months[max_increase_month]} (${(str(max_increase_value))})")
 print(f"Max Decrease: {all_months[min_increase_month)} (${str(min_increase_value))})")
 
-# STEP 4: Output file data as txt file. 
+# STEP 5: Output file data as txt file. 
 
 output_file = Path("python-challenge", "PyBank", "Financial_Analysis_Summary.txt")
 with open(output_file,"w") as file
 
-# Write into the file.Note that "\n" inputs space. 
+# STEP 6: Write into the file.Note that "\n" inputs space. 
 
 file.write("Financial Analysis:")
 file.write("\n")
